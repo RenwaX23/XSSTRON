@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<body>
+  <center>
+    <h1 style="color:darkorchid">Mass URL Scan, Seperate By New Line</h1>
+    <h4 id=er style="color:rgb(253, 0, 0)"></h4>
+    <textarea id=x rows=17 cols=83></textarea><br><br>
+    <button style="font-size:large" onclick="s()">Submit</button>
+
+  </center>
+
+  <script>
+
+function xsswx(jj){
+  const remote = require('electron').remote;
+  const BrowserWindow = remote.BrowserWindow;
+  const win = new BrowserWindow({
+    icon: __dirname + '/build/1.ico',
+    height: 0,
+    width: 0,
+    x: 0,
+      y:0,
+    webPreferences: {
+      enableRemoteModule: true,
+      nodeIntegration : true,
+      webviewTag : true,
+      contextIsolation: false
+
+      
+    
+  }
+  
+  });
+  win.setMenuBarVisibility(false)
+
+  win.loadURL('file://' + require('path').join(__dirname, 'xss.html?shqlipqli='+escape(jj)))
+  win.blur();
+
+  
+
+}
+
+    var ar;
+    function s(){
+    str = document.getElementById('x').value;
+    ar = str.split("\n");
+
+
+for (var x = 0, ln = ar.length; x < ln; x++) {
+  setTimeout(function(y) {    
+if(ar[y].startsWith("http://") || ar[y].startsWith("https://")){
+    xsswx(ar[y])
+    er.innerText=''
+}
+else{
+  er.innerText='URL Must Start With http/https'
+}
+  }, x * 3300, x); 
+}
+
+
+    }
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+#browser-tabs {
+  display: flex;
+  background: linear-gradient(to bottom, #ddd 90%, #bbb);
+  font-size: 13px;
+  -webkit-app-region: drag;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+#browser-tabs > div {
+  -webkit-app-region: drag;
+  flex: 1;
+  display: flex;
+  background: linear-gradient(to bottom, #ddd 90%, #bbb);
+  color: #777;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  cursor: default;
+  white-space: nowrap;
+}
+#browser-tabs > div:nth-child(4) {
+  border-left: 1px solid #ccc;
+  margin-left: 7px;
+}
+#browser-tabs > div.active {
+  -webkit-app-region: drag;
+  background: linear-gradient(to bottom, #e5e5e5 90%, #ddd);
+  color: #555;
+}
+#browser-tabs > div > span {
+  flex: 1;
+  padding: 6px 0 4px 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#browser-tabs > div > span > i {
+  margin-left: 5px;
+}
+#browser-tabs > div > a {
+  -webkit-app-region: no-drag;
+  display: inline-block;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+}
+#browser-tabs > div > a:hover {
+  background: rgb(245, 119, 119);
+  color: #fff;
+}
+#browser-tabs > a {
+  -webkit-app-region: no-drag;
+  display: inline-block;
+  color: #888;
+  font-size: 11px;
+  cursor: pointer;
+  margin: 6px 4px;
+}
+#browser-tabs > a.newtab {
+  padding: 8px 12px 5px 10px;
+  margin: 0;
+}
+#browser-tabs > a.newtab:hover {
+  color: #fff;
+  background: rgb(99, 190, 229);
+}
+#browser-tabs > a.maximize {
+  color: rgb(32, 205, 20);
+  text-shadow: 0 0 1px rgba(8, 77, 3, 1);
+}
+#browser-tabs > a.maximize i {
+  font-size: 12.5px
+}
+#browser-tabs > a.minimize {
+  color: rgb(255, 213, 0);
+  text-shadow: 0 0 1px rgba(65, 42, 2, 1);
+}
+#browser-tabs > a.minimize i {
+  font-size: 12.5px
+}
+#browser-tabs > a.close {
+  color: red;
+  text-shadow: 0 0 1px rgba(50, 1, 1, 1);
+  margin-left: 8px;
+}
+#browser-tabs > a.close i {
+  font-size: 12.5px
+}

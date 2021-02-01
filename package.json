@@ -1,0 +1,24 @@
+{
+  "name": "XSSTRON",
+  "version": "1.0.0",
+  "description": "ElectronJS Browser to Find XSS Vulnerabilities",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "electron",
+    "browser",
+    "webview",
+    "xss"
+  ],
+  "author": "Renwa Hiwa <renwax23@gmail.com>",
+  "license": "GNU",
+  "devDependencies": {
+    "electron": "^11.0"
+  },
+  "dependencies": {
+    "module_name": "^1.0.0"
+  }
+}

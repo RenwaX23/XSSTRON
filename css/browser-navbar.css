@@ -1,0 +1,96 @@
+#browser-navbar {
+  display: flex;
+  flex-direction: row;
+
+  height: 34px;
+  padding: 0 5px;
+  font-size: 15px;
+  font-weight: 100;
+  background: linear-gradient(to bottom, #eee, #ddd);
+  border-bottom: 1px solid #aaa;
+}
+
+.fa-circle{
+  opacity: 0.5;
+  transition: 0.2s;
+}
+.fa-circle:hover{opacity:1}
+
+#browser-navbar a {
+  display: inline-block;
+
+  text-decoration: none;
+  color: #777;
+  cursor: pointer;
+  padding: 9px 7px 0;
+}
+
+#browser-navbar .jx a:hover {
+
+    display: inline-block;
+  text-decoration: none;
+  color: blue;
+}
+
+#browser-navbar a:hover {
+
+  display: inline-block;
+text-decoration: none;
+}
+#browser-navbar a.disabled {
+  display: inline-block;
+  color: #bbb;
+  cursor: default;
+}
+
+#browser-navbar .fa-angle-double-left,
+#browser-navbar .fa-angle-left,
+#browser-navbar .fa-angle-right,
+#browser-navbar .fa-commenting-o {
+  /* small positioning adjustment */
+  position: relative;
+  top: -1px;
+}
+
+#browser-navbar .input-group {
+  flex: 1;
+  display: flex;
+  margin: 0 5px;
+}
+
+#browser-navbar .input-group input {
+  flex: 1;
+  margin: 4px 0 3px;
+  padding: 0 5px;
+  font-size: 14px;
+  color: #808080;
+  outline: 0;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: 1px solid #bbb;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+#browser-navbar .input-group input:focus, 
+#browser-navbar .input-group input:active, 
+#browser-navbar .input-group input:hover {
+  outline: 0;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  border: 1px solid #bbb;
+}
+
+#browser-navbar .input-group a {
+  border: 1px solid #bbb;
+  border-left: 0;
+  padding: 4px 0;
+  margin: 4px 0 3px;
+  flex: 0 0 30px;
+  text-align: center;
+}
+
+#browser-navbar a:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}

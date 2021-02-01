@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="./react.js"></script>
+    <script src="./JSXTransformer.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/browser.css">
+    <link rel="stylesheet" href="./css/browser-tabs.css">
+    <link rel="stylesheet" href="./css/browser-navbar.css">
+    <link rel="stylesheet" href="./css/browser-page.css">
+  </head>
+  <body>
+    <div id="browser-chrome" style="width: 100%;height: 100%;"></div>
+    <script type="text/jsx" src="./browser-tabs.jsx"></script>
+    <script type="text/jsx" src="./browser-navbar.jsx"></script>
+    <script type="text/jsx" src="./browser-page.jsx"></script>
+    <script type="text/jsx" src="./browser.jsx"></script>
+    <script>
+
+      function xsswx(jj){
+  const remote = require('electron').remote;
+  const BrowserWindow = remote.BrowserWindow;
+  const win = new BrowserWindow({
+    icon: __dirname + '/build/1.ico',
+    height: 0,
+    width: 0,
+    x: 0,
+      y:0,
+    webPreferences: {
+      enableRemoteModule: true,
+      nodeIntegration : true,
+      webviewTag : true,
+      contextIsolation: false
+
+      
+    
+  }
+  
+  });
+  win.setMenuBarVisibility(false)
+
+  win.loadURL('file://' + require('path').join(__dirname, 'xss.html?shqlipqli='+escape(jj)))
+  win.blur();
+
+  
+
+}
+
+var swich = 1;
+
+setTimeout(function(){
+  let webview = document.querySelector('webview')
+observer = new MutationObserver((changes) => {
+  changes.forEach(change => {
+      if(change.attributeName.includes('src')){
+        if(swich){
+        xsswx(webview.src);
+        }
+      }
+  });
+});
+observer.observe(webview, {attributes : true});
+
+webview.addEventListener('new-window', (e) => {
+    const protocol = require('url').parse(e.url).protocol
+    if (protocol === 'http:' || protocol === 'https:') {
+      webview.src=(e.url);
+    }
+  })
+
+
+}
+,1000)
+
+const { ipcRenderer } = window.require('electron');
+
+var xp=null;
+
+function xsswxa(jj,jjx){
+  const remote = require('electron').remote;
+  const BrowserWindow = remote.BrowserWindow;
+  const win = new BrowserWindow({
+    icon: __dirname + '/build/1.ico',
+    height: 0,
+    width: 0,
+    x: 0,
+      y:0,
+    webPreferences: {
+      enableRemoteModule: true,
+      nodeIntegration : true,
+      webviewTag : true,
+      contextIsolation: false
+
+      
+    
+  }
+  
+  });
+  win.setMenuBarVisibility(false)
+
+  win.loadURL('file://' + require('path').join(__dirname, 'xssp.html?shqlipqli='+escape(jj)+'&shqlipqlip='+escape(jjx)))
+  win.blur();
+}
+
+ipcRenderer.on('my-ipc-channel',function (event, data) {
+
+  if(String.fromCharCode.apply(null, data.uploadData[0])!=undefined){
+  xp=String.fromCharCode.apply(null, data.uploadData[0].bytes);
+
+  if(new URL(document.querySelector('webview').src).hostname==new URL(data.url).hostname && !(data.url.includes('#shetajyanmx'))){
+   
+
+    
+if(swich){
+xsswxa(data.url,xp)
+}
+
+
+
+  }
+
+
+
+  }
+
+
+});
+
+    </script>
+  </body>
+</html>
