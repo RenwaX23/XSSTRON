@@ -3,11 +3,11 @@
   <br>
   <img width=150 src=https://i.imgur.com/QxUbGIP.png>
   <br>
-  XSSTRON, Electron JS Browser To Find XSS Vulnerabilitiesr
+  XSSTRON, Electron JS Browser To Find XSS Vulnerabilities
   <br><br><br>
 </h4>
 
-#### Powerfull Electron+Chromium Browser to find XSS Vulnerabilites automatically while browsing web, it can detect many case scenarios with support of POST requests too
+#### Powerful Chromium Browser to find XSS Vulnerabilites automatically while browsing web, it can detect many case scenarios with support for POST requests too
 
 ### Installation
 ```
