@@ -18,7 +18,7 @@ cd XSSTRON
 npm install
 npm start
 ```
-Some users using Debian/Ubuntu might not able to run the tool as i think it's an issue with Electron itself, you can continue using the app in Window/OSX and Linux installed on Windows
+Some users using Debian/Ubuntu might not able to run the tool as i think it's an issue with Electron itself, you can continue using the app in Window/OSX and Linux installed on Windows. Check [Known Issues](https://github.com/RenwaX23/XSSTRON#known-issues)
 
 ### Usage
 **Just browse the web like a normal web browser then it will automatically look for XSS vulns in background and show them in a new window with POC**
