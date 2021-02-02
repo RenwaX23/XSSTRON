@@ -36,6 +36,12 @@ Some users using Debian/Ubuntu might not able to run the tool as i think it's an
 
 Some users in certain linux distributions get into some problems try these
 
+- In (package.json) change it to:
+```
+  "devDependencies": {
+    "electron": "^10"
+  },
+  ```
 - Try to update npm and nodejs to latest version
 - delete node_modules folder and reinstall
 - in package.json change the electron devDepencies to (electron11-bin)
