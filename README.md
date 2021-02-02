@@ -11,6 +11,8 @@
 
 ### Installation
 ```
+Become root (sudo su)
+Install Node.js and npm (https://www.npmjs.com/get-npm) or (sudo apt install npm)
 Download this repo files or (git clone https://github.com/RenwaX23/XSSTRON)
 cd XSSTRON
 npm install
