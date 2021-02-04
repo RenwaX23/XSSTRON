@@ -11,7 +11,6 @@
 
 ### Installation
 ```
-Become root (sudo su)
 Install Node.js and npm (https://www.npmjs.com/get-npm) or (sudo apt install npm)
 Download this repo files or (git clone https://github.com/RenwaX23/XSSTRON)
 cd XSSTRON
@@ -36,6 +35,14 @@ Some users using Debian/Ubuntu might not able to run the tool as i think it's an
 
 Some users in certain linux distributions get into some problems try these
 
+Kali/Debian users this fixes installation:
+```
+sudo apt install npm
+sudo npm install -g electron --unsafe-perm=true --allow-root
+cd XSSTRON
+sudo npm install
+electron . --no-sandbox
+```
 - In (package.json) change it to:
 ```
   "devDependencies": {
