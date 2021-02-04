@@ -43,10 +43,10 @@ Some users in certain linux distributions get into some problems try these
   },
   ```
 - Try to update npm and nodejs to latest version
-- delete node_modules folder and reinstall
+- delete node_modules and package-lock.json and reinstall
 - in package.json change the electron devDepencies to (electron11-bin)
 - install electron using (npm install electron) and run the app with electron using (electron .)
-with each step remember to delete the node_modules folder and re install again using (npm install)
+with each step remember to delete the node_modules and package-lock.json and re install again using (npm install)
 
 **Failed to serialize arguments** is known issue and might be fixed soon :)
 
