@@ -27,7 +27,7 @@ var ujs1 = `///xsstron.herokuapp.com/x.php`
 
 
 var j = new URL(location).searchParams.get('shqlipqli')
-  document.getElementById('h5').innerHTML='URL Tested: <span style=color:black>'+j+'</span>'
+  document.getElementById('h5').innerHTML='URL Tested: <span style=color:black>'+escapeHtml(j)+'</span>'
 
  let jx = j.substr(j.indexOf('?')+1)
 
