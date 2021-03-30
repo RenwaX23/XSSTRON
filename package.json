@@ -16,7 +16,7 @@
   "author": "Renwa Hiwa <renwax23@gmail.com>",
   "license": "GNU",
   "devDependencies": {
-    "electron": "^11.0"
+    "electron": "^10"
   },
   "dependencies": {
     
